@@ -47,19 +47,23 @@ window.onload = function() {
     }
     document.onclick = function() { go(++cur % (s.length)); };
     function fwd() { 
-		reverse=false
+		reverse=false;
 		go(Math.min(s.length - 1, ++cur)); 
 	}
     function rev() { 
-		reverse=true 
+		reverse=true;
 		go(Math.max(0, --cur)); 
 	}
     document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 38) fwd();
-        if (e.which === 33) fwd();
-        if (e.which === 37) rev();
-        if (e.which === 40) rev();
+
+        if (e.which === 33) fwd(); // pgUp
+        if (e.which === 37) fwd(); // left;
+        if (e.which === 38) fwd(); // up;
+
+
+        if (e.which === 34) rev(); // pgDown
+        if (e.which === 39) rev(); // right 
+        if (e.which === 40) rev(); // down
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
