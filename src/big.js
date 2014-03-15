@@ -56,14 +56,14 @@ window.onload = function() {
 	}
     document.onkeydown = function(e) {
 
-        if (e.which === 33) fwd(); // pgUp
-        if (e.which === 37) fwd(); // left;
-        if (e.which === 38) fwd(); // up;
+        if (e.which === 33) rev(); // pgUp
+        if (e.which === 37) rev(); // left;
+        if (e.which === 38) rev(); // up;
 
 
-        if (e.which === 34) rev(); // pgDown
-        if (e.which === 39) rev(); // right 
-        if (e.which === 40) rev(); // down
+        if (e.which === 34) fwd(); // pgDown
+        if (e.which === 39) fwd(); // right 
+        if (e.which === 40) fwd(); // down
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
