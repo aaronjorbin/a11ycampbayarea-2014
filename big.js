@@ -4,10 +4,10 @@ window.onload = function() {
     function go(n) {
 		if (s[n].parentNode != document.getElementsByTagName('body')[0]){
 			if (reverse)
-				go(n-1)
+				go(n-1);
 			else
-				go(n+1)
-			return
+				go(n+1);
+			return;
 		}
         cur = n;
         var i = 1e3, e = s[n], t;
@@ -24,12 +24,12 @@ window.onload = function() {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
-		children = e.getElementsByTagName('div')
+		children = e.getElementsByTagName('div');
 		if (children) {
 			for(var rr = 0; rr < children.length; rr++) {
-				children[rr].style.display = ''
+				children[rr].style.display = '';
 			}
-			children = false
+			children = false;
 		}
         if (ti !== undefined) window.clearInterval(ti);
         t = parseInt(e.getAttribute('time-to-next') || 0, 10);
@@ -87,6 +87,5 @@ window.onload = function() {
     go(cur);
 
 
-	var cur = 30;
 
 };
